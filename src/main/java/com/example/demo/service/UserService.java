@@ -10,6 +10,8 @@ import com.example.demo.repository.UserRepository;
 import java.time.Clock;
 import java.util.Optional;
 import java.util.UUID;
+
+import jdk.swing.interop.SwingInterOpUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -43,7 +45,7 @@ public class UserService {
         userEntity.setCertificationCode(UUID.randomUUID().toString());
         userEntity = userRepository.save(userEntity);
         String certificationUrl = generateCertificationUrl(userEntity);
-        sendCertificationEmail(userCreateDto.getEmail(), certificationUrl);
+//        sendCertificationEmail(userCreateDto.getEmail(), certificationUrl);
         return userEntity;
     }
 
