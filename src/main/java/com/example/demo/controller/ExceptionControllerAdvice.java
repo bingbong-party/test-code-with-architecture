@@ -20,7 +20,8 @@ public class ExceptionControllerAdvice {
 
     @ResponseBody
     @ResponseStatus(NOT_FOUND)
-    @ExceptionHandler(ResourceNotFoundException.class)
+    @ExceptionHandler(
+            ResourceNotFoundException.class)
     public String resourceNotFoundException(ResourceNotFoundException exception) {
         return exception.getMessage();
     }
