@@ -1,10 +1,11 @@
 package com.example.demo.post.service;
 
+import com.example.demo.post.service.port.PostRepository;
 import com.example.demo.user.exception.ResourceNotFoundException;
 import com.example.demo.post.domain.PostCreate;
 import com.example.demo.post.domain.PostUpdate;
 import com.example.demo.post.infrastructure.PostEntity;
-import com.example.demo.post.infrastructure.PostRepository;
+import com.example.demo.post.infrastructure.PostJpaRepository;
 import com.example.demo.user.infrastructure.UserEntity;
 import java.time.Clock;
 
